@@ -1,0 +1,192 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: content-box;
+    background-color: rebeccapurple;
+    padding:0px;
+    margin:0px;
+}
+
+
+
+.navbar{
+    background-color: burlywood;
+    height: 50px;
+    text-align: center;
+    position: sticky;
+   top:8px;
+    border-radius: 20px;
+    
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+}
+.navbar ul li {
+    margin: 10px 20px;
+   
+}
+ 
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+    color:white;
+}
+
+.navbar ul li a:hover {
+  color: blueviolet;
+}
+.navbar ul li a.active {
+    color: green;
+  }
+
+
+  .container{
+    margin: 9px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+  
+  }
+
+  .wrapper{
+  
+  
+  }
+  #home{
+    text-align: center;
+    background-color: red;
+  }
+
+  .wrapper #home img{
+    height: 300px;
+    border-radius: 50%;
+    
+  }
+  #home h1{
+    font-size: 90px;
+  
+  }
+
+  #about {
+    height: 30vh;
+    background-color: green;
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #about .intro {
+      width: 40%;
+      text-align: center;
+  }
+
+  #about .education{
+    width: 40%;
+  }
+
+  h3{
+    font-size: 30px;
+    margin: 8px;
+    font-weight:bold ;
+    
+  }
+  h5{
+    font-size: 20px;
+    margin: 8px;
+  
+    
+  }
+
+  p, ul{
+    font-weight: bold;
+    
+  }
+  ul {
+    list-style-type:none;
+  }
+  #about .education li{
+    margin: 10px 0px;
+  }
+
+section{
+    margin: 40px 0px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#project {
+
+    background-color: blue;
+   
+}
+
+  .project_des {
+    display: flex;
+   
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    margin: 8px 0px;
+
+  }
+  #project .project_id{
+    width: 23%;
+    background-color: red;
+    margin:10px;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  #project .project_id img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    
+  }
+  #project .project_id p {
+           text-align: center;
+  }
+
+
+  #skill{
+    background-color: red;
+  }
+  .skill_content{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+
+  .skill_known, .skill_familiar{
+
+  
+    width: 40%;
+  }
+  .skill_known li , .skill_familiar li , #courses li, #contact li{
+    margin: 10px;
+  }
+
+
+  #courses{
+    background-color: green;
+  }
+#contact{
+    background-color: brown;
+}
+
+  .contact_info{
+    background:brown;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #contact .contact_detail{
+    width: 40%;
+  }
+  #contact .git{
+    width: 40%;
+  }
