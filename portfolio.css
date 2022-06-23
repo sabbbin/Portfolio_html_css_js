@@ -3,8 +3,15 @@ body{
     font-family: 'Roboto', sans-serif;
     box-sizing: content-box;
     background-color: rebeccapurple;
-    padding:0px;
+    padding:auto;
     margin:0px;
+    font-size: 18px;
+    background-image: url('/img/images.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
 }
 
 
@@ -14,10 +21,50 @@ body{
     height: 50px;
     text-align: center;
     position: sticky;
-   top:8px;
+   top:0px;
     border-radius: 20px;
+    z-index: 1;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: height 1s linear;
+   
     
 }
+.navbar i.close,
+.navbar i.open
+{
+  color:white;
+  font-size: 27px;
+  margin-left: 10px;
+  position: absolute;
+  right: 10px;
+  display: none;
+  padding: 0 10px;
+}
+
+.navbar.active ul{
+  flex-direction: column;
+  display: block;
+}
+.navbar.active{
+  height: 280px;
+
+  overflow: hidden;
+}
+
+i.close.active
+{
+  display: block;
+}
+i.open.active
+{
+  display: none!important;
+}
+
+
+
 .navbar ul{
     list-style-type: none;
     display: flex;
@@ -29,8 +76,11 @@ body{
    
 }
  
+a{
+  text-decoration: none;
+}
 .navbar ul li a {
-    text-decoration: none;
+   
     font-size: 22px;
     font-weight: 700;
     color:white;
@@ -46,7 +96,7 @@ body{
 
   .container{
     margin: 9px;
-    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,41 +104,82 @@ body{
   
   }
 
-  .wrapper{
+  section{
+    margin: 40px 0px;
+    padding: 60px 0px;
+    border-radius: 20px;
+    z-index: -2;
+    height: 59vh;
+    overflow-y: auto;
+   
   
+}
+
   
-  }
+
   #home{
     text-align: center;
-    background-color: red;
+    
+    position: relative;
+    top:4px;
+    animation: topanimation 2s linear;
   }
 
-  .wrapper #home img{
+   #home img{
     height: 300px;
     border-radius: 50%;
     
   }
   #home h1{
-    font-size: 90px;
+    font-size: 60px;
   
   }
 
   #about {
-    height: 30vh;
-    background-color: green;
-    padding:20px;
+ 
+
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+
   }
   
   #about .intro {
+
       width: 40%;
       text-align: center;
+      position: relative;
+      padding: 0;
+      margin-top: 40px;
+  
+     
+    
+     
   }
+
+ 
+  .slide_left{
+    transform: translateX(-200%);
+    transition: transform .3s linear;
+  }
+  .slide_right{
+    transform: translateX(200%);
+    transition: transform .3s linear;
+  }
+  .slide_left.show,
+  .slide_right.show{
+    transform: translateX(0%);
+  }
+
 
   #about .education{
     width: 40%;
+
+    position: relative;
+    
   }
+
+
 
   h3{
     font-size: 30px;
@@ -114,21 +205,18 @@ body{
     margin: 10px 0px;
   }
 
-section{
-    margin: 40px 0px;
-    padding: 10px;
-    border-radius: 20px;
-}
+
 
 #project {
 
-    background-color: blue;
+
+
    
 }
 
   .project_des {
     display: flex;
-   
+    justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 20px 10px;
     margin: 8px 0px;
@@ -140,27 +228,129 @@ section{
     margin:10px;
     border-radius: 30px;
     overflow: hidden;
+    text-align: center;
+    color: white;
+    position: relative;
+    
+    
+  }
+
+  #project .project_id a{
+    color: white;
   }
   #project .project_id img{
-    height: 150px;
+    height: 180px;
     width: 100%;
     object-fit: cover;
     
   }
+
+  #project .project_wrapper{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    
+    position:absolute;
+    top:245px;
+    height: 228px;
+    width: 100%;
+    transition: top 1s linear;
+  }
+
+
+
+  .project_id i {
+    height: 20px;
+    margin-left: 10px;
+  }
+  .project_id .img_wrapper,
+  .project_id .img_wrapper1
+  ,.project_id .img_wrapper2
+  ,.project_id .img_wrapper3 
+  ,.project_id .img_wrapper4
+  ,.project_id .img_wrapper5
+  ,.project_id .img_wrapper6
+  {
+    position: relative;
+    height: 180px;
+  }
+  .project_id .img_wrapper img ,
+  .project_id .img_wrapper1 img
+  ,.project_id .img_wrapper2 img
+  ,.project_id .img_wrapper3 img
+  ,.project_id .img_wrapper4 img
+  ,.project_id .img_wrapper5 img
+  ,.project_id .img_wrapper6 img
+  {
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    
+  }
+  .project_id .img_wrapper img.active,
+  .project_id .img_wrapper1 img.active,
+  .project_id .img_wrapper2 img.active,
+  .project_id .img_wrapper3 img.active,
+  .project_id .img_wrapper4 img.active,
+  .project_id .img_wrapper5 img.active,
+  .project_id .img_wrapper6 img.active
+  {
+    
+    opacity: 1;
+    
+    
+    
+
+  }
+
+
+
+.project_id:hover .project_wrapper{
+    top :0px! important;
+    transition: top 1s linear!;
+
+  }
+
+  
+
+
+  h5{
+    font-family: sans-serif;
+    font-size: 15px;
+    margin:5px 6px;
+   
+  }
+  h6{
+    font-family: 'Times New Roman', Times, serif;
+    margin:5px 6px;
+    color:lightblue;
+    background-color: royalblue;
+    width: 60%;
+    border-radius: 30px;
+    margin:5px auto;
+  }
   #project .project_id p {
-           text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    
   }
 
 
   #skill{
-    background-color: red;
+    
   }
   .skill_content{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
   }
 
-
+  .skill_known{
+    margin-top: 84px;
+  }
   .skill_known, .skill_familiar{
 
   
@@ -170,23 +360,85 @@ section{
     margin: 10px;
   }
 
+  /* courses */
 
   #courses{
-    background-color: green;
+
+    
+    align-items: center;
+    
   }
+  #courses ul{
+    width: 40%;
+    margin: auto;
+ 
+
+  }
+  #courses h3, #contact h3{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+
+  /* contact portion  */
 #contact{
-    background-color: brown;
+
+}
+#contact h3{
+  text-align: center;
 }
 
   .contact_info{
-    background:brown;
+   
     display: flex;
     justify-content: space-evenly;
   }
 
   #contact .contact_detail{
-    width: 40%;
+    width: 60%;
+    font-size: 18px;
+  }
+  .contact_detail i {
+    margin-right: 10px;
   }
   #contact .git{
-    width: 40%;
+    width: 30%;
+  }
+  #contact .git i {
+    font-size: 25px;
+
+  }
+
+
+  @media screen  and (max-width:680px){
+    body{
+      font-size: 14px;
+    }
+    .navbar i.open {
+      display: block;
+    }
+ 
+    .navbar ul{
+    
+     display: none;
+      
+     
+    }
+  }
+
+  @media screen and (max-width:1043px) {
+    #poject .project_id{
+      width: 30%;
+    }
+    
+  }
+
+  @keyframes topanimation {
+    from{
+         top: 0px;
+    }
+    to{
+      top: 4px;
+  }
+    
   }

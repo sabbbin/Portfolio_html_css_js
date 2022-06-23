@@ -8,9 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="./portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>My Portfolio</title>
 </head>
 <body>
+    <div class="main_container">
+
      <nav class="navbar">
         <ul>
             <li><a href="#home">Home</a></li>
@@ -21,17 +24,23 @@
             <li><a href="#contact">Contact</a></li>
           
         </ul>
+        <i class="fa-solid fa-xmark close"></i>
+        <i class="fa-solid fa-bars open"></i>
 
      </nav>
     <div class="container">
        <div class="wrapper">
-        <section id="home">
-            <img  src ='./sabin.jpg'/>
-            <h1>Hi, I'm Sabin Suwal.</h1>
            
-        </section>
+           <section id="home">
+                <div class="home_container">
+                <img  src ='./sabin.jpg'/>
+                <h1>Hi, I'm Sabin Suwal.</h1>
+               
+            </div>
+            </section>
+        
         <section id="about">
-            <div class="intro">
+            <div class="intro slide_left">
                 <h3>About</h3>
                 <p>
                    Motivated and hard-working computer engineering, seeking a
@@ -42,7 +51,7 @@
    frameworks.
                 </p>
             </div>
-            <div class="education">
+            <div class="education slide_right">
                     <h3>Education</h3>
                      <ul>
                         <li>Sainik Awaisya Maha-vidhyala  (School, College)</li>
@@ -53,35 +62,334 @@
         </section>
         <section id="project">
             <h3>Projects</h3>
-            <div class="project_des">
+            <div class="project_des slide_left">
 
+                <div class="project_id ">
+                    <a
+                    href="https://github.com/sabbbin/Diabetes_prediction_system/tree/sabin"
+                    >
+                        <div class="img_wrapper">
+
+                            <img 
+                             src="/img/diabetes/1.1.jpeg" />
+                            <img src="/img/diabetes/1.2.jpg" />
+                            <img src="/img/diabetes/1.3.jpg" />
+                        </div>
+                        <h5> Diabetes_prediction_system
+                           
+                        </h5>
+                        <h6>( ML and Django )</h6>
+                       <div class="project_wrapper active">
+
+                           <div class="project_info">
+                               <p>
+                                Features
+                                <br>
+                                <br>
+                                   Predict diabetes,
+                                   Compare algorithm,
+                                   Show Accuracy
+                               </p>
+                                       
+                                   
+                           </div>
+                       </div>
+                    </a>
+                </div>
+                
                 <div class="project_id">
-                     <img src="/sabin.jpg" />
-                     <p> this is my first project</p>
+                    <a
+                    href="https://gitlab.com/sabinsuwal/mern-3-self/-/tree/mern"
+                    >
+                        <div class="img_wrapper1">
+
+                            <img 
+                            class="active"
+                             src="/img/ecommerce/1.1.png" />
+                              <img 
+                                src="/img/ecommerce/1.2.png" />
+                                <img 
+                                src="/img/ecommerce/1.3.png" />
+                                <img 
+                                src="/img/ecommerce/1.4.png" />
+                                <img 
+                                src="/img/ecommerce/1.5.png" />
+                            
+                        </div>
+                        <h5> 
+                           Online Shopping
+                        </h5>
+                        <h6>( MERN )</h6>
+                       <div class="project_wrapper active">
+
+                           <div class="project_info">
+                               <p>
+                                  Features:
+                                  <br>
+                                  <br>
+                                  Authentication,
+                                  Authorization,
+                                  Checkout,
+                                  History,
+                                  Card,
+                                  Admin Dashboard,
+                                  CustomerRoute,
+                                  AdminRoute,
+                                  CRUD operation
+                    
+
+                                   
+                               </p>
+                             
+                                   
+                           </div>
+                       </div>
+                    </a>
+                </div>
+                
+                <div class="project_id">
+                    <a
+                    href="https://gitlab.com/sabinsuwal/hostpital/-/tree/sabin "
+                    >
+                        <div class="img_wrapper2">
+
+                            <img 
+                            class="active"
+                             src="img/hostipal/1.1.png" />
+                              <img 
+                                src="/img/hostipal/1.2.png" />
+                                <img 
+                                src="/img/hostipal/1.3.png" />
+                                <img 
+                                src="/img/hostipal/1.4.png" />
+                                <img 
+                                src="/img/hostipal/1.5.png" />
+                            
+                        </div>
+                        <h5> 
+                           Hospital Management
+                        </h5>
+                        <h6>( MERN )</h6>
+                       <div class="project_wrapper active">
+
+                           <div class="project_info">
+                               <p>
+                                  Features:
+                                  <br>
+                                  <br>
+                                  Authentication,
+                                  Authorization,
+                                  appointment,
+                                  DoctorAssigned
+                                  Admin Dashboard,
+                                  DoctorRoute,
+                                  PatientRoute,
+                                  CRUD operation
+                    
+
+                                   
+                               </p>
+                             
+                                   
+                           </div>
+                       </div>
+                    </a>
                 </div>
                 <div class="project_id">
-                    <img src="/sabin.jpg" />
-                    <p> this is my first project</p>
-               </div>
-               <div class="project_id">
-                <img src="/sabin.jpg" />
-                <p> this is my first project</p>
-           </div>
-           <div class="project_id">
-            <img src="/sabin.jpg" />
-            <p> this is my first project</p>
-       </div>
-       <div class="project_id">
-        <img src="/sabin.jpg" />
-        <p> this is my first project</p>
-    </div>
+                    <a
+                    href="https://github.com/sabbbin/Resturant-ReactJSRedux/tree/master"
+                    >
+                        <div class="img_wrapper3">
+
+                            <img 
+                            class="active"
+                             src="img/resturant/1.1.png" />
+                              <img 
+                                src="/img/resturant/1.2.png" />
+                                <img 
+                                src="/img/resturant/1.3.png" />
+                               
+                            
+                        </div>
+                        <h5> 
+                           Cafe Order
+                        </h5>
+                        <h6>( ReactJs )</h6>
+                       <div class="project_wrapper active">
+
+                           <div class="project_info">
+                               <p>
+                                  Features:
+                                  <br>
+                                  <br>
+                                 Give order,
+                                 View order,
+                                 Change order
+                    
+
+                                   
+                               </p>
+                             
+                                   
+                           </div>
+                       </div>
+                    </a>
+                </div>
+                <div class="project_id">
+                    <a
+                    href="https://github.com/sabbbin/Ecomm-mern"
+                    >
+                        <div class="img_wrapper4">
+
+                            <img 
+                            class="active"
+                             src="img/ecommern2/1.1.png" />
+                              <img 
+                                src="/img/ecommern2/1.2.png" />
+                                <img 
+                                src="/img/ecommern2/1.3.png" />
+                               
+                            
+                        </div>
+                        <h5> 
+                           Online Shopping 1
+                        </h5>
+                        <h6>( MERN )</h6>
+                       <div class="project_wrapper active">
+
+                           <div class="project_info">
+                               <p>
+                                  Features:
+                                  <br>
+                                  <br>
+                                 Login,
+                                 Register,
+                                 View,
+                                 Detai ,
+                                 Authentication,
+                                 Email,
+                                 
+                    
+
+                                   
+                                 <br>
+                                 <br>
+                                 <br>
+                                 Not complete
+                               </p>
+                             
+                                   
+                           </div>
+                       </div>
+                    </a>
+                </div>
+                <div class="project_id">
+                    <a
+                    href="https://github.com/sabbbin/chat_app"
+                    >
+                        <div class="img_wrapper5">
+
+                            <img 
+                            class="active"
+                             src="img/chat_application/1.1.png" />
+                              <img 
+                                src="/img/chat_application/1.2.png" />
+                                <img 
+                                src="/img/chat_application/1.3.png" />
+                               
+                            
+                        </div>
+                        <h5> 
+                        Chat application
+                        </h5>
+                        <h6>( ReactJs )</h6>
+                       <div class="project_wrapper active">
+
+                           <div class="project_info">
+                               <p>
+                                  Features:
+                                  <br>
+                                  <br>
+                                login viw,
+                                register view,
+                                chat view
+
+                                <br>
+                                <br>
+                                <br>
+                                Not complete
+                    
+                                 
+                    
+
+                                   
+                               </p>
+                             
+                                   
+                           </div>
+                       </div>
+                    </a>
+                </div>
+                <div class="project_id">
+                    <a
+                    href="https://github.com/sabbbin/50projects-html-css-javascript" 
+                    >
+                        <div class="img_wrapper6">
+
+                            <img 
+                            class="active"
+                             src="img/basicproject/1.1.png" />
+                              <img 
+                                src="/img/basicproject/1.2.png" />
+                                <img 
+                                src="/img/basicproject/1.3.png" />
+                                <img 
+                                src="/img/basicproject/1.4.png" />
+                                <img 
+                                src="/img/basicproject/1.5.png" />
+                            
+                        </div>
+                        <h5> 
+                        50 project
+                        </h5>
+                        <h6>( HTML, CSS, JS )</h6>
+                       <div class="project_wrapper active">
+
+                           <div class="project_info">
+                               <p>
+                                  Features:
+                                  <br>
+                                  <br>
+                                50 basic poject
+
+                               
+                    
+                                 
+                    
+
+                                   
+                               </p>
+                             
+                                   
+                           </div>
+                       </div>
+                    </a>
+                </div>
+                
+                
+
+
+
+
+
+             
             </div>
         </section>
         <section id="skill">
         
             <div class="skill_content">
 
-                <div class="skill_known">
+                <div class="skill_known slide_left">
                     <h3>Skill</h3>
                     <ul>
                         <li>ReactJs</li>
@@ -90,6 +398,7 @@
                         
                         <li>MongoDB</li>
                         <li>ExpressJs</li>
+                        <li>Redux</li>
                        
                         <li>C, C++ ,Python</li>
                         
@@ -98,7 +407,7 @@
                     </ul>
     
                 </div>
-                <div class="skill_familiar">
+                <div class="skill_familiar slide_right">
                     <h3>Familiar</h3>
                     <ul>
                         <li>C#</li>
@@ -115,6 +424,9 @@
             </div>
         </section>
         <section id="courses">
+            <div class="slide_right">
+
+            
             <h3>Courses</h3>
             <ul>
                 <li>
@@ -130,35 +442,36 @@
 
                 </li>
             </ul>
-          
+        </div>
         </section>
         <section id="contact">
             <h3>Contact</h3>
             <div class="contact_info">
 
-                <div class="contact_detail">
+                <div class="contact_detail slide_left">
                   <ul>
-                      <li>Bhaktapur, Nepal</li>
-                      <li>(+977) 9843906193</li>
-                      <li>sabin721063@gmail.com</li>
+                      <li><i class="fa-solid fa-location-pin"></i>Bhaktapur, Nepal</li>
+                      <li><i class="fa-solid fa-phone"></i>(+977) 9843906193</li>
+                      <li><i class="fa-solid fa-envelope"></i>sabin721063@gmail.com</li>
                   </ul>
       
                 </div>
-                <div class="git">
+                <div class="git slide_right">
                    <ul>
-                      <li>github</li>
-                      <li>gitlab</li>
+                      <li><i class="fa-brands fa-github"></i></li>
+                      <li><i class="fa-brands fa-gitlab"></i></li>
                       <li>linkend</li>
                    </ul>
                 </div>
             </div>
         </section>
        
-        </div>
-        
+      
 
        </div>
     </div>
+
+</div>
     <script  src="./portfolio.js"></script>
 </body>
 </html>
