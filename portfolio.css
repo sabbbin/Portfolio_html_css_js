@@ -384,6 +384,9 @@ a{
 #contact{
 
 }
+#contact a{
+  color:white;
+ }
 #contact h3{
   text-align: center;
 }
