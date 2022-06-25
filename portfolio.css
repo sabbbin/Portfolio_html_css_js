@@ -430,9 +430,16 @@ a{
   }
 
   @media screen and (max-width:1043px) {
-    #poject .project_id{
+    #project .project_id{
       width: 30%;
     }
+    
+  }
+   @media screen and (max-width:450px) {
+    #project .project_id{
+      width: 50%;
+    }
+ 
     
   }
 
